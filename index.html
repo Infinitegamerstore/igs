@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - InfiniteGamerStore</title>
+  <title>CodePen - new infinity</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -49,6 +49,96 @@
         .whatsapp-btn:focus {
             outline: none;
         }
+
+        /* Marquee styles */
+        .marquee {
+            width: 100%;
+            background-color: yellow;
+            border: 2px solid black; /* Reduced border size */
+            padding: 5px 0; /* Reduced padding */
+            margin-top: 10px;
+            font-size: 16px; /* Slightly smaller font size */
+            font-weight: bold;
+            text-align: center;
+            position: relative;
+            height: 20px; /* Reduced height to fit text better */
+            overflow: hidden;
+        }
+        .marquee span {
+            display: inline-block;
+            white-space: nowrap;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: marquee 15s linear infinite;
+        }
+        @keyframes marquee {
+            from {
+                left: 100%;
+            }
+            to {
+                left: -100%;
+            }
+        }
+        /* New Product Section Styles */
+        .new-product-section {
+            margin-top: 30px;
+        }
+        .new-product-section h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .new-product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns */
+            gap: 20px;
+        }
+        .new-product-card {
+            width: 100%; /* Full width within grid column */
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        .new-product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .new-product-card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .new-product-card p {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 0;
+        }
+        .new-product-card .buy-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .new-product-card .buy-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .new-product-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+            }
+        }
+        @media (max-width: 768px) {
+            .new-product-grid {
+                grid-template-columns: 1fr; /* 1 column on small screens */
+            }
+        }
     </style>
 </head>
 <body>
@@ -58,7 +148,7 @@
                 <img src="https://i.ibb.co/ykdCg92/IMG-6095.jpg" alt="Infinite Gamer Store Logo">
             </div>
             <div class="nav-title-container">
-                <div class="nav-title">INFINITY</div>
+                <div class="nav-title">INFINITE </div>
             </div>
             <div class="header-right">
                 <div class="country-selection">
@@ -91,56 +181,107 @@
                     <img src="https://i.ibb.co/wMwS358/IMG-6093.jpg" alt="Slide Image 3">
                 </div>
             </div>
+            <!-- Marquee for moving text message -->
+         <div class="marquee">
+    <span>WE ARE YOUR PREMIER DESTINATION FOR DIGITAL GAMING GOODS AND SERVICES</span>
+</div>
+ 
+
         </section>
 
         <section id="games">
-            <h2>MOBILE GAMES RECHARGE</h2>
+            <h2>SPECILIST MLBBs</h2>
             <div class="product-grid">
                 <div class="product-card">
                     <img src="https://www.kazukiofficialstore.com/web/images/game/1701674839-MLBB%20M5%20icon%20(2).png" alt="Karina Zodiac">
-                    <h3>Mobile Legend</h3>
-                    <p>IdServer</p>
+                    <h3>Mobile Legends</h3>
+                    <p>Moonton</p>
                     <button class="buy-btn" onclick="window.location.href='https://infinitegamerstore.github.io/id-server/'">Top Up</button>
                 </div>
                 <div class="product-card">
                     <img src="https://hubscredits.com/assets/images/games/1705408894_1610afb3a29a9951f545.jpg" alt="Exorcist Tokens">
-                    <h3>Mobile Legend</h3>
+                    <h3>Mobile Legends</h3>
                     <p>Log-In</p>
                     <button class="buy-btn" onclick="window.location.href='https://infinitegamerstore.github.io/log-in/'">Top Up</button>
                 </div>
                 <div class="product-card">
                     <img src="https://www.kazukiofficialstore.com/web/images/game/1716803819-helcurt%20starlight.jpg" alt="Helcurt Starlight">
                     <h3>Monthly Starlight</h3>
-                    <p>Via GIFTING</p>
+                    <p>Via Gifting</p>
                     <button class="buy-btn" onclick="window.location.href='https://infinitegamerstore.github.io/starlight/'">Top Up</button>
                 </div>
                 <div class="product-card">
                     <img src="https://www.kazukiofficialstore.com/web/images/game/1718098181-Phase%201%20token.jpg" alt="Exorcist Skins">
-                    <h3>Pre-Order EVENTS</h3>
-                    <p>Via GIFTING</p>
+                    <h3>NEW EVENTS</h3>
+                    <p>Pre-Order</p>
                     <button class="buy-btn" onclick="window.location.href='https://infinitegamerstore.github.io/pre-orders/'">Top Up</button>
                 </div>
                 <div class="product-card">
-                    <img src="https://th.bing.com/th?q=Bgmi+HD&w=120&h=120&c=1&rs=1&qlt=90&cb=1&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" alt="Charisma">
-                    <h3>B.G.M.I. INDIA</h3>
-                    <p>Via ID</p>
-                    <button class="buy-btn" onclick="window.location.href='https://infinitegamerstore.github.io/bgmi/'">Top Up</button>
+                    <img src="https://hubscredits.com/assets/images/games/1717838021_d1e6f628bfc7f9093c6c.jpeg" alt="Charisma">
+                    <h3>Coupon Pass  </h3>
+                    <p>Moonton</p>
+                    <button class="buy-btn" onclick="window.location.href='https://infinitegamerstore.github.io/coupon-pass/'">Top Up</button>
                 </div>
                 <div class="product-card">
-                    <img src="https://th.bing.com/th?q=Account+Shop+Netflix+Spotify&w=120&h=120&c=1&rs=1&qlt=90&cb=1&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" alt="Mobile Legends">
-                    <h3>OTT SERVICE</h3>
-                    <p>Via EMAIL</p>
-                    <button class="buy-btn" onclick="window.location.href='https://infinitegamerstore.github.io/ott/'">Top Up</button>
+                    <img src="https://www.kazukiofficialstore.com/web/images/game/1718691709-IMG_2509.jpeg" alt="Mobile Legends">
+                    <h3>Next Starlight</h3>
+                    <p> Pre-Order</p>
+                    <button class="buy-btn" onclick="window.location.href='https://infinitegamerstore.github.io/preorderstarlight/'">Top Up</button>
                 </div>
             </div>
         </section>
+
+        <!-- New Section for Other Games -->
+     <section id="games">
+            <h2>POPULAR GAMES RECHARGE</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://hubscredits.com/assets/images/games/1711478619_2e0f5eb094e9176908f8.png" alt="Karina Zodiac">
+                    <h3>B.G.M.I. INDIA</h3>
+                    <p>Krafton</p>
+                    <button class="buy-btn" onclick="window.location.href='https://infinitegamerstore.github.io/bgmi/'">Top Up</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://th.bing.com/th?q=Free+Fire+Game+iPhone+App+Icon&w=120&h=120&c=1&rs=1&qlt=90&cb=1&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" alt="Exorcist Tokens">
+                    <h3>FREE FIRE INDIA</h3>
+                    <p>Garena</p>
+                    <button class="buy-btn" onclick="window.location.href='https://infinitegamerstore.github.io/free-fire/'">Top Up</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://chigongleistore.com/productImages/1717931891827--GENSHIN-IMPACT.jpg" alt="Helcurt Starlight">
+                    <h3>Genshin Impact</h3>
+                    <p>HoYoverse</p>
+                    <button class="buy-btn" onclick="window.location.href='https://infinitegamerstore.github.io/GENSHIN/'">Top Up</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://th.bing.com/th/id/OIP.7TjU6oFQLVkMo7ViL3TXQwHaHa?w=182&h=180&c=7&r=0&o=5&pid=1.7" alt="Exorcist Skins">
+                    <h3>P.U.B.G Global</h3>
+                    <p>Krafton</p>
+                    <button class="buy-btn" onclick="window.location.href='https://infinitegamerstore.github.io/GlobalUC/'">Top Up</button>
+                </div> 
+                <div class="product-card">
+                    <img src="https://i.ibb.co/H4xGszr/clash-of-clans.jpg" alt="Exorcist Skins">
+                    <h3>Clash of Clans</h3>
+                    <p>SuperCell</p>
+                    <button class="buy-btn" onclick="window.location.href='https://infinitegamerstore.github.io/clash-of-clan/'">Top Up</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://th.bing.com/th?q=Account+Shop+Netflix+Spotify&w=120&h=120&c=1&rs=1&qlt=90&cb=1&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" alt="Charisma">
+                    <h3>OTt Services</h3>
+                    <p>Premium </p>
+                    <button class="buy-btn" onclick="window.location.href='https://infinitegamerstore.github.io/ott-service/'">Top Up</button>
+                </div>
     </main>
+<section id="footer-marquee">
+            <div class="marquee">
+                <span>CUSTOMER SERVICE STARTS FROM   9AM - 9PM </span>
+            </div>
 
     <footer>
         <div class="contact">
             <p>Join our WhatsApp Group: <a href="https://chat.whatsapp.com/LoOk6aSCYWG2puPoAGLhYT" id="whatsapp-link-footer">JOIN NOW</a></p>
         </div>
-        <p>&copy; 2024 INFINITE GAMER STORE. All rights reserved.</p>
+        <p>&copy; 2021 INFINITE GAMER STORE. All rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
